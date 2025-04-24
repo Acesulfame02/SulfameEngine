@@ -20,13 +20,13 @@ project "SulfameEngine"
 	objdir ("bin-int/" .. outdir .. "/%{prj.name}")
 	files
 	{
-		"Sulfame/src/**.h",
-		"Sulfame/src/**.cpp",
-        "Sulfame/Sulfame.h"
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp",
+        "%{prj.name}/Sulfame.h"
 	}
 	includedirs
 	{
-		"Sulfame/vendor/spdlog/include",
+		"%{prj.name}/vendor/spdlog/include",
 	}
 
 	filter "system:windows"
@@ -72,8 +72,8 @@ project "SandBox"
 
 	includedirs
 	{
-		"Sulfame",
-		"Sulfame/vendor/spdlog/include"
+		"SulfameEngine",
+		"SulfameEngine/vendor/spdlog/include"
 	}
 
 	links

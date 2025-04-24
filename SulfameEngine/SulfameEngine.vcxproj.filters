@@ -6,25 +6,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Sulfame\Sulfame.h" />
-    <ClInclude Include="..\Sulfame\src\Application.h">
+    <ClInclude Include="Sulfame.h" />
+    <ClInclude Include="src\Application.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Sulfame\src\Core.h">
+    <ClInclude Include="src\Core.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Sulfame\src\EntryPoint.h">
+    <ClInclude Include="src\EntryPoint.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Sulfame\src\Log.h">
+    <ClInclude Include="src\Log.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Sulfame\src\Application.cpp">
+    <ClCompile Include="src\Application.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Sulfame\src\Log.cpp">
+    <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
