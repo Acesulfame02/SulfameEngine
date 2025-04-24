@@ -57,6 +57,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SE_PLATFORM_WINDOWS;SE_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Sulfame\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -71,6 +73,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SE_PLATFORM_WINDOWS;SE_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Sulfame\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,10 +84,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Sulfame.h" />
-    <ClInclude Include="src\Sulfame\Application.h" />
-    <ClInclude Include="src\Sulfame\Core.h" />
-    <ClInclude Include="src\Sulfame\EntryPoint.h" />
+    <ClInclude Include="Sulfame\src\Log.h" />
+    <ClInclude Include="Sulfame\Sulfame.h" />
+    <ClInclude Include="Sulfame\src\Application.h" />
+    <ClInclude Include="Sulfame\src\Core.h" />
+    <ClInclude Include="Sulfame\src\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
@@ -94,7 +99,8 @@
     <Text Include="LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Sulfame\Application.cpp" />
+    <ClCompile Include="Sulfame\src\Log.cpp" />
+    <ClCompile Include="Sulfame\src\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

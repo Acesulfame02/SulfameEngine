@@ -2,10 +2,11 @@
 
 //For use by Sulfame applications
 
-#include "Sulfame/Application.h"
+#include "src/Application.h"
+#include "src/Log.h"
 
 //---- Entry Point --------------------------------
 
-#include "Sulfame/EntryPoint.h"
+#include "src/EntryPoint.h"
 
 //------------------------------------

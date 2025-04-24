@@ -15,16 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Sulfame\Core.h">
+    <ClInclude Include="Sulfame\src\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sulfame\Application.h">
+    <ClInclude Include="Sulfame\src\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sulfame.h">
+    <ClInclude Include="Sulfame\Sulfame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sulfame\EntryPoint.h">
+    <ClInclude Include="Sulfame\src\EntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sulfame\src\Log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -37,7 +40,10 @@
     <Text Include="LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Sulfame\Application.cpp">
+    <ClCompile Include="Sulfame\src\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sulfame\src\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
