@@ -35,6 +35,8 @@
     <None Include="README.md" />
     <None Include=".gitignore" />
     <None Include=".gitattributes" />
+    <None Include="premake5.lua" />
+    <None Include=".gitmodules" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
