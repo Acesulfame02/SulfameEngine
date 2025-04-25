@@ -1,4 +1,5 @@
-#include "Log.h"
+#include "sepch.h"
+#include "src/Log.h"
 
 namespace SulfameEngine {
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;

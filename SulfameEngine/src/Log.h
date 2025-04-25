@@ -1,8 +1,9 @@
 #pragma once
-#include <memory>
+
 #include <spdlog/spdlog.h>
 #include "spdlog/sinks/stdout_color_sinks.h"
-#include "Core.h"
+#include "spdlog/fmt/ostr.h"
+#include "src/Core.h"
 
 namespace SulfameEngine {
 

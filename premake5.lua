@@ -18,15 +18,24 @@ project "SulfameEngine"
 	language "C++"
 	targetdir ("bin/" .. outdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outdir .. "/%{prj.name}")
+
 	files
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
-        "%{prj.name}/Sulfame.h"
+        "%{prj.name}/Sulfame.h",
+        "%{prj.name}/sepch.h",
+        "%{prj.name}/sepch.cpp",
+		"%{prj.name}/src/Events/**.**"
 	}
+
+	pchheader "sepch.h"
+	pchsource "SulfameEngine/sepch.cpp"
+
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}"
 	}
 
 	filter "system:windows"
@@ -64,6 +73,7 @@ project "SandBox"
 	language "C++"
 	targetdir ("bin/" .. outdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outdir .. "/%{prj.name}")
+
 	files
 	{
 		"%{prj.name}/src/**.h",
