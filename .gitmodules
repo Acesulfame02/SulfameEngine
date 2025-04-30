@@ -1,3 +1,6 @@
 [submodule "Sulfame/vendor/spdlog"]
 	path = Sulfame/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "SulfameEngine/vendor/GLFW"]
+	path = SulfameEngine/vendor/GLFW
+	url = https://github.com/Acesulfame02/glfw
