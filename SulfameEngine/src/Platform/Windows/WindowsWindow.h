@@ -1,7 +1,6 @@
 #pragma once
 #include "src/Window.h"
 #include <GLFW/glfw3.h>
-#include "src/Log.h"
 
 namespace SulfameEngine {
 

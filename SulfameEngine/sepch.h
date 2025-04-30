@@ -13,6 +13,8 @@
 #include <vector>
 #include <ostream>
 
+#include "src/Log.h"
+
 #ifdef SE_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
