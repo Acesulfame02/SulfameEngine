@@ -6,6 +6,7 @@
 namespace SulfameEngine{
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -14,8 +15,9 @@ namespace SulfameEngine{
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		SE_TRACE("{}", e.ToString());
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }

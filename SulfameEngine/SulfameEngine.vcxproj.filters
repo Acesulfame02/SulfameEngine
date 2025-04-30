@@ -35,6 +35,8 @@
     <ClInclude Include="src\Log.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sepch.cpp" />
@@ -44,5 +46,6 @@
     <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

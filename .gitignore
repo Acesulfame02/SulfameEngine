@@ -9,6 +9,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+SulfameEngine/vendor/GLFW/bin/
+SulfameEngine/vendor/GLFW/bin-int/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
