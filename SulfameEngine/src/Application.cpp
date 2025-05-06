@@ -5,13 +5,22 @@
 #include <GLFW/glfw3.h>
 
 namespace SulfameEngine{
+
+#define SE_BIND_EVENT_FN(fn) std::bind(&Application::fn, this, std::placeholders::_1)
+
 	Application::Application()
 	{
 		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window->SetEventCallback(SE_BIND_EVENT_FN(OnEvent));
 	}
 
 	Application::~Application()
 	{
+	}
+
+	void Application::OnEvent(Event& e)
+	{
+		SE_CORE_INFO("{0}", e);
 	}
 
 	void Application::Run()

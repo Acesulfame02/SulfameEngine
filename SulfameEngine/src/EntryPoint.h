@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 	SulfameEngine::Log::Init(); // Initialize the logging system
 	SE_CORE_WARN("Initialized Log!");
 	SE_INFO("Welcome to Sulfame!");
-	int a = 5;
+	int a = 1;
 	SE_FATAL("Sulfame Engine Version: {0}", a);
 	auto app = SulfameEngine::CreateApplication(); // Create an instance of the application
 	app->Run();
