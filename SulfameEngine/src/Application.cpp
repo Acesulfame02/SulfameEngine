@@ -20,7 +20,15 @@ namespace SulfameEngine{
 
 	void Application::OnEvent(Event& e)
 	{
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(SE_BIND_EVENT_FN(OnWindowClose));
 		SE_CORE_INFO("{0}", e);
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
 	}
 
 	void Application::Run()
