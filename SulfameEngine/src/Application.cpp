@@ -23,6 +23,22 @@ namespace SulfameEngine{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(SE_BIND_EVENT_FN(OnWindowClose));
 		SE_CORE_INFO("{0}", e);
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();) 
+		{
+			(*--it)->OnEvent(e);
+			if (e.Handled)
+				break;
+		}
+	}
+
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+	}
+
+	void Application::PushOverlay(Layer* overlay)
+	{
+		m_LayerStack.PushOverlay(overlay);
 	}
 
 	bool Application::OnWindowClose(WindowCloseEvent& e)
@@ -37,6 +53,9 @@ namespace SulfameEngine{
 		{
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate();
+
 			m_Window->OnUpdate();
 		}
 	}

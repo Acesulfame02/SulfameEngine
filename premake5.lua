@@ -53,7 +53,7 @@ project "SulfameEngine"
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++latest"
-		staticruntime "On"
+		staticruntime "Off"
 		defines
 		{
 			"SE_PLATFORM_WINDOWS",
@@ -69,14 +69,17 @@ project "SulfameEngine"
 
 	filter "configurations:Debug"
 		defines "SE_DEBUG"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SE_RELEASE"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "SE_DIST"
+		runtime "Release"
 		optimize "On"
 
 project "SandBox"
@@ -106,7 +109,7 @@ project "SandBox"
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++latest"
-		staticruntime "On"
+		staticruntime "Off"
 		defines
 		{
 			"SE_PLATFORM_WINDOWS"
@@ -116,12 +119,15 @@ project "SandBox"
 
 	filter "configurations:Debug"
 		defines "SE_DEBUG"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "SE_RELEASE"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "SE_DIST"
+		runtime "Release"
 		optimize "On"

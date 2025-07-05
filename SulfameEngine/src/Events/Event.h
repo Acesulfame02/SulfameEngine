@@ -37,6 +37,8 @@ namespace SulfameEngine {
         inline bool IsInCategory(EventCategory category) {
             return GetCategoryFlags() & category;
         }
+        bool Handled = false;
+
     protected:
         bool m_Handled = false;
     };

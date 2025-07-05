@@ -83,7 +83,7 @@
       <AdditionalIncludeDirectories>vendor\spdlog\include;.;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -110,7 +110,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -138,7 +138,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
@@ -155,7 +155,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Window.h" />
     <ClInclude Include="Sulfame.h" />
     <ClInclude Include="sepch.h" />
     <ClInclude Include="src\Application.h" />
@@ -165,14 +164,19 @@
     <ClInclude Include="src\Events\Event.h" />
     <ClInclude Include="src\Events\KeyEvent.h" />
     <ClInclude Include="src\Events\MouseEvent.h" />
+    <ClInclude Include="src\Layer.h" />
+    <ClInclude Include="src\LayerStack.h" />
     <ClInclude Include="src\Log.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Layer.cpp" />
+    <ClCompile Include="src\LayerStack.cpp" />
     <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>

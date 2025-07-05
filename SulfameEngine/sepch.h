@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <memory>
+#include <stdio.h>
 #include <utility>
 #include <algorithm>
 #include <functional>

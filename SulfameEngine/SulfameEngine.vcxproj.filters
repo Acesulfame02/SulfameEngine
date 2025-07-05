@@ -7,6 +7,12 @@
     <Filter Include="src\Events">
       <UniqueIdentifier>{7162C20E-5D1A-045C-C621-DDB7B2F89E4C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sulfame.h" />
@@ -32,20 +38,38 @@
     <ClInclude Include="src\Events\MouseEvent.h">
       <Filter>src\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Layer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LayerStack.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="src\Log.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sepch.cpp" />
     <ClCompile Include="src\Application.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Layer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LayerStack.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
