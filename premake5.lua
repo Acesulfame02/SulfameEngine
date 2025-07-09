@@ -14,8 +14,10 @@ outdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "SulfameEngine/vendor/GLFW/include"
+IncludeDir["GLAD"] = "SulfameEngine/vendor/GLAD/include"
 
 include "SulfameEngine/vendor/GLFW"
+include "SulfameEngine/vendor/GLAD"
 
 project "SulfameEngine"
 	location "SulfameEngine"
@@ -42,11 +44,13 @@ project "SulfameEngine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}",
 		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}"
 	}
 
 	links
 	{
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 
@@ -57,7 +61,8 @@ project "SulfameEngine"
 		defines
 		{
 			"SE_PLATFORM_WINDOWS",
-			"SE_BUILD_DLL"
+			"SE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		buildoptions { "/utf-8" }

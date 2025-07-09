@@ -2,7 +2,7 @@
 #include "src/Application.h"
 #include "src/Events/ApplicationEvent.h"
 #include "src/Log.h"
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace SulfameEngine{
 
