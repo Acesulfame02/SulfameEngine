@@ -24,6 +24,7 @@ public:
 	SandBox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new SulfameEngine::ImGuiLayer());
 	}
 	~SandBox()
 	{

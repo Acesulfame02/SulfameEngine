@@ -53,6 +53,9 @@
     <ClInclude Include="src\Window.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_opengl_renderer.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_opengl_renderer_loader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sepch.cpp" />
@@ -71,5 +74,7 @@
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\imgui_opengl_renderer.cpp" />
   </ItemGroup>
 </Project>
