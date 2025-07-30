@@ -1,5 +1,5 @@
 project "GLAD"
-	location "SulfameEngine/vendor/GLAD"
+	location "."
 	kind "StaticLib"
 	language "C"
 	staticruntime "Off"

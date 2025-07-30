@@ -51,7 +51,7 @@ namespace SulfameEngine {
 		io.AddKeyEvent(ImGuiKey_Y, GLFW_KEY_Y);
 		io.AddKeyEvent(ImGuiKey_Z, GLFW_KEY_Z);
 
-		ImGui_ImplOpenGL3_Init("#version 430 core"); // Initialize OpenGL renderer with version 330 core
+		ImGui_ImplOpenGL3_Init("#version 410 core"); // Initialize OpenGL renderer with version 330 core
 	}
 
 	void ImGuiLayer::OnDetach()
@@ -128,13 +128,6 @@ namespace SulfameEngine {
 		dispatcher.Dispatch<MouseScrolledEvent>([&](MouseScrolledEvent& e)
 			{
 				io.AddMouseWheelEvent(e.GetXOffset(), e.GetYOffset());
-				return false;
-			});
-
-		// Optional: if you have KeyTypedEvent or TextInputEvent
-		dispatcher.Dispatch<KeyTypedEvent>([&](KeyTypedEvent& e)
-			{
-				io.AddInputCharacter(e.GetCharacter());
 				return false;
 			});
 	}

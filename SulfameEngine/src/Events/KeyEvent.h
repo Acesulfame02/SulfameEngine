@@ -53,15 +53,6 @@ namespace SulfameEngine {
 	public:
 		KeyTypedEvent(unsigned int character)
 			: KeyEvent(0), m_Character(character) {
-		} // KeyEvent base still needs something
-
-		unsigned int GetCharacter() const { return m_Character; }
-
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "KeyTypedEvent: " << m_Character;
-			return ss.str();
 		}
 
 		EVENT_CLASS_TYPE(KeyTyped)

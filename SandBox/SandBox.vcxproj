@@ -143,6 +143,15 @@
     <ProjectReference Include="..\SulfameEngine\SulfameEngine.vcxproj">
       <Project>{4892342A-B452-B060-7D8D-F9DDE90CF53C}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\SulfameEngine\vendor\GLFW\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SulfameEngine\vendor\GLAD\GLAD.vcxproj">
+      <Project>{5D4A857C-4981-860D-F26D-6C10DE83020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SulfameEngine\vendor\ImGui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

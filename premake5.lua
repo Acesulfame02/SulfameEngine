@@ -15,11 +15,11 @@ outdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "SulfameEngine/vendor/GLFW/include"
 IncludeDir["GLAD"] = "SulfameEngine/vendor/GLAD/include"
-IncludeDir["ImGui"] = "SulfameEngine/vendor/imgui"
+IncludeDir["ImGui"] = "SulfameEngine/vendor/ImGui"
 
 include "SulfameEngine/vendor/GLFW"
 include "SulfameEngine/vendor/GLAD"
-include "SulfameEngine/vendor/imgui"
+include "SulfameEngine/vendor/ImGui"
 
 project "SulfameEngine"
 	location "SulfameEngine"
@@ -80,7 +80,7 @@ project "SulfameEngine"
 		defines "SE_DEBUG"
 		runtime "Debug"
 		symbols "On"
-
+		
 	filter "configurations:Release"
 		defines "SE_RELEASE"
 		runtime "Release"
@@ -112,7 +112,10 @@ project "SandBox"
 
 	links
 	{
-		"SulfameEngine"
+		"SulfameEngine",
+		"GLFW",
+		"GLAD",
+		"ImGui",
 	}
 
 	filter "system:windows"

@@ -7,7 +7,7 @@
 		#define SULFAME_API __declspec(dllimport)
 	#endif
 #else
-	#error Sulfame only supports Windows!
+	#define SULFAME_API
 #endif // SE_PLATFORM_WINDOWS
 
 #ifdef SE_ENABLE_ASSERTS
